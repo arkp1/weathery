@@ -21,7 +21,7 @@ export const WeatherProvider = ({ children }) => {
 
   const fetchWeather = async () => {
     if (!location) return;
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
 
     try {
       const response = await fetch(url);
