@@ -40,6 +40,7 @@ export const WeatherProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    if(location)
     fetchWeather();
   }, [location]);
 
