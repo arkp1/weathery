@@ -9,8 +9,6 @@ export const WeatherProvider = ({ children }) => {
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const geoApiKey = import.meta.env.VITE_GEOLOCATION_API_KEY;
 
-  console.log(`geo api`, import.meta.env.VITE_GEOLOCATION_API_KEY)
-  console.log(`weather api`, import.meta.env.VITE_WEATHER_API_KEY)
   // GeoLocation API
   const fetchGeolocation = async () => {
     if (location) return;
