@@ -40,15 +40,15 @@ export default function Content() {
     <div className="flex flex-col items-center justify-center min-h-screen w-screen bg-gradient-to-br from-gray-900 to-gray-700 text-white overflow-hidden font-merriweather"> 
       {/* Weather Card */}
       {weather ? (
-        <div className="relative bg-gray-800/70 backdrop-blur-md mb-12 ml-5 mr-5 p-7 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-center w-fit max-w-full border border-gray-700 transition-transform duration-300 hover:scale-105">
+        <div className="relative bg-gray-800/70 backdrop-blur-md mb-12 ml-5 mr-5 p-8 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-center w-fit sm:w-fit border border-gray-700 transition-transform duration-300 hover:scale-105">
           {/* Location */}
-          <h2 className="text-2xl sm:text-4xl font-light tracking-wide">
+          <h2 className="text-lg sm:text-4xl font-light tracking-wide">
             {weather.location.name}, {weather.location.region}
           </h2>
 
           {/* Temperature */}
           <div className="flex items-center justify-center space-x-3 mt-4">
-            <span className="text-5xl sm:text-7xl md font-bold">
+            <span className="text-4xl sm:text-7xl md font-bold">
               {weather.current.temp_c}°C
             </span>
             <span className="text-4xl text-gray-400">|</span>
