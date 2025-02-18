@@ -13,7 +13,7 @@ function Header() {
   };
 
   return (
-    <header className="w-screen bg-gradient-to-tr from-gray-900 to-gray-700 text-white px-3">
+    <header className="w-screen bg-gradient-to-tr from-gray-900 to-gray-700 text-white px-3 font-merriweather">
       <div className="flex flex-col md:flex-row justify-between items-center w-full">
         <h1 className="text-4xl md:text-7xl">weathery.</h1>
 
