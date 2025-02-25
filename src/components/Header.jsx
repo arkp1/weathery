@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useWeather } from "../Utils";
 import { FaSearch} from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
 
 function Header() {
   const { setLocation, fetchWeather } = useWeather();

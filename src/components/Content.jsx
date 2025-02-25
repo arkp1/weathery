@@ -13,7 +13,6 @@ import {
   TiWavesOutline,
   TiWeatherStormy,
 } from "react-icons/ti";
-import { FaSearch } from "react-icons/fa";
 
 export default function Content() {
   const { weather } = useWeather();
