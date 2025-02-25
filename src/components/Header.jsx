@@ -5,7 +5,8 @@ function Header() {
   const { setLocation, fetchWeather } = useWeather();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     if (!searchQuery.trim()) return;
     setLocation(searchQuery);
     setSearchQuery("");
@@ -13,26 +14,38 @@ function Header() {
   };
 
   return (
-    <header className="w-screen bg-gradient-to-tr from-gray-900 to-gray-700 text-white px-3 font-merriweather">
-      <div className="flex flex-col md:flex-row justify-between items-center w-full">
-        <h1 className="text-4xl md:text-7xl">weathery.</h1>
+    <header className="w-full bg-gradient-to-tr from-indigo-900 to-blue-700 text-white font-merriweather px-4 py-4 backdrop-blur-lg shadow-lg">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center w-full">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white">
+          weathery<span className="text-blue-300">.</span>
+        </h1>
 
-        <div className="flex items-center mt-4 md:mt-0">
-          <input
-            type="text"
-            placeholder="Enter location"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="border-black border-2 indent-2 w-60 md:w-80 rounded-l-lg p-1.5 text-black border-none outline-none"
-          />
-
-          <button
-            onClick={handleSearch}
-            className="bg-gray-800 text-white p-2 w-16 rounded-r-lg hover:bg-gray-900"
-          >
-            Go
-          </button>
-        </div>
+        <form onSubmit={handleSearch} className="mt-4 md:mt-0 w-full md:w-auto">
+          <div className="flex items-center backdrop-blur-md bg-white/10 rounded-full overflow-hidden border border-white/20 shadow-lg hover:shadow-blue-400/20 transition-all duration-300">
+            <input
+              type="text"
+              placeholder="Search city..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-transparent w-full md:w-64 px-4 py-2 focus:outline-none text-white placeholder-blue-100"
+            />
+            <button
+              type="submit"
+              className="bg-blue-600/60 hover:bg-blue-500/80 text-white px-5 py-2 transition-colors flex items-center justify-center"
+            >
+              <svg 
+                viewBox="0 0 24 24" 
+                className="w-5 h-5 fill-current"
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                fill="none"
+              >
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </header>
   );

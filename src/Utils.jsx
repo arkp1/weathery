@@ -29,6 +29,7 @@ export const WeatherProvider = ({ children }) => {
 
       const weatherData = await response.json();
       setWeather(weatherData);
+      console.log(weatherData)
       return weatherData;
     } catch (error) {
       console.error(error);
