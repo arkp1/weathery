@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useWeather } from "../Utils";
+import { FaSearch} from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
 
 function Header() {
   const { setLocation, fetchWeather } = useWeather();
@@ -16,12 +18,12 @@ function Header() {
   return (
     <header className="w-full bg-gradient-to-tr from-indigo-900 to-blue-700 text-white font-merriweather px-4 py-4 backdrop-blur-lg shadow-lg">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center w-full">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white">
+        <h1 className="text-4xl md:text-5xl h-[52px] font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white">
           weathery<span className="text-blue-300">.</span>
         </h1>
 
         <form onSubmit={handleSearch} className="mt-4 md:mt-0 w-full md:w-auto">
-          <div className="flex items-center backdrop-blur-md bg-white/10 rounded-full overflow-hidden border border-white/20 shadow-lg hover:shadow-blue-400/20 transition-all duration-300">
+          <div className="flex items-center backdrop-blur-md bg-white/10 rounded-full overflow-auto border border-white/20 shadow-lg hover:shadow-blue-400/20 transition-all duration-300">
             <input
               type="text"
               placeholder="Search city..."
@@ -31,18 +33,9 @@ function Header() {
             />
             <button
               type="submit"
-              className="bg-blue-600/60 hover:bg-blue-500/80 text-white px-5 py-2 transition-colors flex items-center justify-center"
+              className="bg-blue-600/60 hover:bg-blue-500/80 text-white px-5 py-3 transition-colors flex items-center justify-center"
             >
-              <svg 
-                viewBox="0 0 24 24" 
-                className="w-5 h-5 fill-current"
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                fill="none"
-              >
-                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
+              <FaSearch />
             </button>
           </div>
         </form>
