@@ -192,7 +192,7 @@ export default function Content() {
             </div>
 
             {/* Details Section - More compact grid */}
-            <div className="bg-black/20 px-2 pt-6 md:pt-4 pb-6 md:pb-1.5">
+            <div className="bg-black/20 px-2 pt-6 md:pt-4 pb-4 md:pb-1.5">
               <div className="grid grid-cols-2 gap-2">
                 <div className="flex flex-col items-center p-2 bg-white/5 rounded-lg">
                   <span className="text-s font-light">Feels Like</span>
