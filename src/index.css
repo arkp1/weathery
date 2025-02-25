@@ -6,6 +6,16 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     height: 100%;
+  }
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    html, body {
+      overflow: hidden;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    html, body {
+      overflow: auto;
+    }
   }
