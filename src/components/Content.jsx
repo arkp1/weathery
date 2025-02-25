@@ -192,7 +192,7 @@ export default function Content() {
             </div>
 
             {/* Details Section - More compact grid */}
-            <div className="bg-black/20 px-2 pt-4 md:pt-3 pb-3 md:pb-1.5">
+            <div className="bg-black/20 rounded-xl px-2 pt-4 md:pt-3 pb-3 md:pb-1.5">
               <div className="grid grid-cols-2 gap-2">
                 <div className="flex flex-col items-center p-2 bg-white/5 rounded-lg">
                   <span className="text-s font-light">Feels Like</span>
@@ -221,7 +221,7 @@ export default function Content() {
               </div>
 
               {/* Last Updated - Standalone card with higher visibility */}
-              <div className="mt-3 p-2 md:p-1.5 bg-blue-400/20 rounded-lg text-center">
+              <div className="mt-3 p-2 md:p-1.5 bg-blue-400/20 rounded-xl text-center">
                 <span className="text-s">Last updated: {getLastUpdated()}</span>
               </div>
             </div>
