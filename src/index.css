@@ -13,7 +13,7 @@ body {
   /* Adjust breakpoint as needed */
   html,
   body {
-    overflow: hidden;
+    overflow: auto;
   }
 }
 

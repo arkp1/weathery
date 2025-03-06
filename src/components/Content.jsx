@@ -1,5 +1,6 @@
 import React from "react";
 import { useWeather } from "../Utils";
+import { Github } from "lucide-react";
 import {
   TiWeatherCloudy,
   TiWeatherDownpour,
@@ -80,7 +81,7 @@ export default function Content() {
           : "bg-gradient-to-br from-indigo-900 to-gray-900"
       } text-white font-merriweather hover:shadow-red-400/20 transition-all duration-300`}
     >
-      <div className="w-full max-w-xl mx-auto">
+      <div className="w-full max-w-xl mx-auto flex-grow mt-3">
         {weather ? (
           <div className="backdrop-blur-lg bg-white/10 rounded-xl shadow-lg border border-white/20 w-full">
             {/* Top Section */}
@@ -152,6 +153,14 @@ export default function Content() {
           </div>
         )}
       </div>
+      <footer className="mt-auto flex items-center space-x-3 text-sm">
+        <span>Made by Praneet.</span>
+        <span>|</span>
+        <a href="https://github.com/arkp1" className="flex items-center space-x-1">
+          <Github strokeWidth={1.25} width={20}  />
+          <span>Github</span>
+        </a>
+      </footer>
     </div>
   );
 }
