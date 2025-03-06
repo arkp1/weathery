@@ -156,8 +156,12 @@ export default function Content() {
       <footer className="mt-auto flex items-center space-x-3 text-sm">
         <span>Made by Praneet.</span>
         <span>|</span>
-        <a href="https://github.com/arkp1" className="flex items-center space-x-1">
-          <Github strokeWidth={1.25} width={20}  />
+        <a
+          href="https://github.com/arkp1"
+          target="_blank"
+          className="flex items-center space-x-1"
+        >
+          <Github strokeWidth={1.25} width={20} />
           <span>Github</span>
         </a>
       </footer>
